@@ -9,7 +9,7 @@ int buttonReading;
 int switchReading;
 int photocellReading;
 
-int switchHigh;  // state when switch will be consdierered on
+int switchHigh;  // state when switch will be considered on
 
 
 // Method: setup()
@@ -47,9 +47,9 @@ void loop() {
   switchReading = digitalRead(switchPin);
   buttonReading = digitalRead(buttonPin);
   photocellReading = analogRead(photocellPin);
-  
+
  // Determine dimness
-  if (photocellReading < 250) {
+  if (photocellReading > 250) {
     streetLightsOn();  // turn on street lights
   } else {
   	streetLightsOff();  // turn off street lights
